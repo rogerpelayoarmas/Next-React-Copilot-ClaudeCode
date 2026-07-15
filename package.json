@@ -1,0 +1,10 @@
+{
+  "name": "esencia-hipnotica-workspace",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix esencia-hipnotica-web run dev",
+    "build": "npm --prefix esencia-hipnotica-web run build",
+    "start": "npm --prefix esencia-hipnotica-web run start",
+    "lint": "npm --prefix esencia-hipnotica-web run lint"
+  }
+}
