@@ -1,0 +1,15 @@
+Un desarrollo Web utilizando las tecnologías React + Next creado con herramientas de IA como Copilot  y Claude Code
+ con la experiencia e un Fullstack de mas de 5 años de experiencia.
+
+
+git config --global user.name "rogerpelayoarmas"
+git config --global user.email "delementpro@gmail.com"
+
+
+echo "# Next-React-Copilot-ClaudeCode" >> README.md
+git init
+git add .
+git commit -m "Iniciando proyecto Next-React-Copilot-ClaudeCode"
+git branch -M main
+git remote add origin https://github.com/rogerpelayoarmas/Next-React-Copilot-ClaudeCode.git
+git push -u origin main

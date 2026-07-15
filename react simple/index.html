@@ -1,0 +1,1719 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Esencia Hipnótica | Transformación Integral</title>
+<link rel="shortcut icon" type="image/x-icon" href="img/ico.ico">
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Estilos propios del tema 
+<link rel="stylesheet" href="style.css">
+-->
+<style>
+
+/* ════════════════════════════════════════════════════════════════
+   ESENCIA HIPNÓTICA - TEMA GLOBAL (vanilla CSS, sin CSS Modules)
+   ════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* Turquesa */
+  --color-turquoise-50: #f0fdf9;
+  --color-turquoise-100: #ccfbf1;
+  --color-turquoise-200: #99f6e4;
+  --color-turquoise-300: #5eead4;
+  --color-turquoise-400: #2dd4bf;
+  --color-turquoise-500: #14b8a6;
+  --color-turquoise-600: #0d9488;
+  --color-turquoise-700: #0f766e;
+  --color-turquoise-800: #134e4a;
+  --color-turquoise-900: #0f3f3a;
+
+  /* Dorado */
+  --color-gold-50: #fefdf2;
+  --color-gold-100: #fef3c7;
+  --color-gold-200: #fde68a;
+  --color-gold-300: #fcd34d;
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #f59e0b;
+  --color-gold-600: #d97706;
+  --color-gold-700: #b45309;
+  --color-gold-800: #92400e;
+  --color-gold-900: #78350f;
+
+  /* Plateado */
+  --color-silver-50: #f8fafc;
+  --color-silver-100: #f1f5f9;
+  --color-silver-200: #e2e8f0;
+  --color-silver-300: #cbd5e1;
+  --color-silver-400: #94a3b8;
+  --color-silver-500: #64748b;
+  --color-silver-600: #475569;
+  --color-silver-700: #334155;
+  --color-silver-800: #1e293b;
+  --color-silver-900: #0f172a;
+
+  /* Naranja cálido */
+  --color-warm-50: #fff7ed;
+  --color-warm-100: #ffedd5;
+  --color-warm-200: #fdba74;
+  --color-warm-300: #fb923c;
+  --color-warm-400: #f97316;
+  --color-warm-500: #ea580c;
+  --color-warm-600: #c2410c;
+  --color-warm-700: #9a3412;
+  --color-warm-800: #7c2d12;
+  --color-warm-900: #431407;
+
+  --color-white: #ffffff;
+  --color-black: #0a0a0a;
+  --color-gray-50: #fafafa;
+  --color-gray-100: #f5f5f5;
+  --color-gray-200: #eeeeee;
+  --color-gray-300: #e0e0e0;
+  --color-gray-400: #bdbdbd;
+  --color-gray-500: #9e9e9e;
+  --color-gray-600: #757575;
+  --color-gray-700: #616161;
+  --color-gray-800: #424242;
+  --color-gray-900: #212121;
+
+  /* Tipografía */
+  --font-serif: 'Playfair Display', 'Cinzel', serif;
+  --font-sans: 'Montserrat', 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+  --font-size-6xl: 3.75rem;
+
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-turquoise: 0 8px 16px rgba(20, 184, 166, 0.15);
+
+  --border-radius-lg: 0.75rem;
+  --border-radius-xl: 1rem;
+  --border-radius-2xl: 1.5rem;
+  --border-radius-full: 9999px;
+
+  --transition-base: all 0.3s ease;
+  --transition-slow: all 0.5s ease;
+
+  --text-primary: var(--color-gray-900);
+  --text-secondary: var(--color-gray-600);
+  --text-tertiary: var(--color-gray-400);
+}
+
+/* ─── RESET Y GLOBALES ─── */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-white);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  color: var(--text-primary);
+}
+
+a {
+  color: var(--color-turquoise-500);
+  text-decoration: none;
+  transition: var(--transition-base);
+}
+
+a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   NAVIGATION
+   ════════════════════════════════════════════════════════════════ */
+
+.navbar-custom {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(20, 184, 166, 0.1);
+  z-index: 1000;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08);
+}
+
+.navbar-custom .container-nav {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  text-decoration: none;
+}
+
+.logo:hover {
+  transform: translateX(2px);
+  text-decoration: none;
+}
+
+.logo-icon {
+  font-size: 2rem;
+  background: linear-gradient(135deg, var(--color-gold-500), var(--color-turquoise-500));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.logo-text {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: var(--space-2);
+}
+
+.hamburger span {
+  width: 24px;
+  height: 2px;
+  background: var(--text-primary);
+  transition: var(--transition-base);
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.nav-menu {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  right: 0;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  padding: var(--space-6);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: var(--transition-base);
+  max-height: calc(100vh - 80px);
+  overflow-y: auto;
+  border-bottom: 1px solid var(--color-silver-200);
+}
+
+.nav-menu.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.menu-title {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-tertiary);
+  margin-bottom: var(--space-4);
+}
+
+.pillars-menu {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.pillar-link {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--border-radius-lg);
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: var(--transition-base);
+  border: 1px solid transparent;
+}
+
+.pillar-link:hover {
+  background-color: rgba(20, 184, 166, 0.05);
+  border-color: var(--color-turquoise-300);
+  color: var(--color-turquoise-600);
+  text-decoration: none;
+}
+
+.pillar-icon {
+  font-size: 1.5rem;
+  min-width: 24px;
+  text-align: center;
+}
+
+.pillar-name {
+  display: block;
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-sm);
+  color: var(--text-primary);
+}
+
+.pillar-desc {
+  display: block;
+  font-size: var(--font-size-xs);
+  color: var(--text-tertiary);
+  font-weight: var(--font-weight-light);
+}
+
+.secondary-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding-left: 0;
+}
+
+.secondary-links a {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  padding: var(--space-2) 0;
+  display: inline-block;
+}
+
+.secondary-links a:hover {
+  color: var(--color-turquoise-600);
+  padding-left: var(--space-2);
+  text-decoration: none;
+}
+
+.cta-button,
+.cta-desktop {
+  padding: var(--space-3) var(--space-6);
+  background: var(--color-turquoise-500);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius-lg);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+  transition: var(--transition-base);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: var(--shadow-turquoise);
+}
+
+.cta-button {
+  width: 100%;
+  padding: var(--space-4) var(--space-6);
+}
+
+.cta-button:hover,
+.cta-desktop:hover {
+  background: var(--color-turquoise-600);
+  transform: translateY(-2px);
+}
+
+.cta-desktop {
+  display: none;
+}
+
+/* FIX: el <a> que envuelve a .cta-desktop no debe contar como ítem flex
+   en .container-nav cuando el botón interno está oculto (mobile/tablet).
+   display:contents "disuelve" la caja del <a> y deja que su hijo
+   (.cta-desktop, con display:none en mobile) sea el que participe
+   realmente en el flex — así el hamburger queda pegado al borde derecho. */
+.container-nav > a:has(> .cta-desktop) {
+  display: contents;
+}
+
+@media (min-width: 1024px) {
+  .hamburger {
+    display: none;
+  }
+
+  .nav-menu {
+    position: static;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-12);
+    background: none;
+    border: none;
+    padding: 0;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    max-height: none;
+    overflow: visible;
+    flex: 1;
+    justify-content: center;
+  }
+
+  .menu-group:first-child {
+    flex: 1;
+  }
+
+  .pillars-menu {
+    flex-direction: row;
+    gap: var(--space-2);
+  }
+
+  .pillar-link {
+    flex-direction: column;
+    padding: var(--space-2) var(--space-3);
+    min-width: 190px;
+    text-align: center;
+  }
+
+  .pillar-icon {
+    width: 100%;
+    font-size: 1.75rem;
+  }
+
+  .cta-wrapper {
+    display: none;
+  }
+
+  .cta-desktop {
+    display: block;
+  }
+}
+
+/* ════════════════════════════════════════════════════════════════
+   HERO
+   ════════════════════════════════════════════════════════════════ */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding-top: 80px;
+}
+
+.background-decoration {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.orb-1,
+.orb-2 {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+}
+
+.orb-1 {
+  top: 5%;
+  right: 10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(20, 184, 166, 0.08) 0%, transparent 70%);
+  animation: floatOrb 6s ease-in-out infinite;
+}
+
+.orb-2 {
+  bottom: 10%;
+  left: 5%;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.05) 0%, transparent 70%);
+  animation: floatOrb 8s ease-in-out infinite reverse;
+}
+
+@keyframes floatOrb {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(30px, -30px); }
+}
+
+.hero .container-hero {
+  max-width: 1280px;
+  width: 100%;
+  padding: 0 var(--space-6);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.logo-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.logo-main-container {
+  width: 300px;
+  height: 300px;
+  animation: floatLogo 3s ease-in-out infinite;
+}
+
+.logo-main {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 20px 40px rgba(20, 184, 166, 0.15));
+}
+
+@keyframes floatLogo {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(-30px); }
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.tagline {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--color-turquoise-600);
+}
+
+.tagline-icon {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+.main-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.25rem, 5vw, 4rem);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.15;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  margin-bottom: 0;
+}
+
+.highlight {
+  background: linear-gradient(135deg, var(--color-turquoise-500), var(--color-gold-500));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-subtitle {
+  font-size: var(--font-size-lg);
+  line-height: 1.7;
+  color: var(--text-secondary);
+  max-width: 550px;
+  font-weight: var(--font-weight-light);
+}
+
+.pillars-preview {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.pillar-badge {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  background: rgba(20, 184, 166, 0.08);
+  border: 1px solid rgba(20, 184, 166, 0.2);
+  border-radius: var(--border-radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-turquoise-700);
+  transition: var(--transition-base);
+}
+
+.pillar-badge:hover {
+  background: rgba(20, 184, 166, 0.12);
+  border-color: var(--color-turquoise-400);
+  transform: translateY(-2px);
+}
+
+.cta-section {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.btn-hero {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-4) var(--space-8);
+  border: none;
+  border-radius: var(--border-radius-lg);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  transition: var(--transition-base);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-hero-primary {
+  background: var(--color-turquoise-500);
+  color: white;
+  box-shadow: var(--shadow-turquoise);
+}
+
+.btn-hero-primary:hover {
+  background: var(--color-turquoise-600);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(20, 184, 166, 0.25);
+}
+
+.btn-hero-secondary {
+  background: white;
+  color: var(--color-turquoise-600);
+  border: 2px solid var(--color-turquoise-200);
+}
+
+.btn-hero-secondary:hover {
+  background: rgba(20, 184, 166, 0.05);
+  border-color: var(--color-turquoise-500);
+}
+
+.button-arrow {
+  transition: transform 0.3s ease;
+}
+
+.btn-hero-primary:hover .button-arrow {
+  transform: translateX(4px);
+}
+
+.credibility {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  padding-top: var(--space-8);
+  border-top: 1px solid rgba(20, 184, 166, 0.1);
+  flex-wrap: wrap;
+}
+
+.cred-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.cred-number {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-turquoise-600);
+}
+
+.cred-label {
+  font-size: var(--font-size-sm);
+  color: var(--text-tertiary);
+  font-weight: var(--font-weight-light);
+}
+
+.cred-divider {
+  width: 1px;
+  height: 40px;
+  background: rgba(20, 184, 166, 0.2);
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: var(--space-8);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  cursor: pointer;
+  animation: bobbing 2s ease-in-out infinite;
+}
+
+.scroll-text {
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-tertiary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.scroll-arrow {
+  width: 20px;
+  height: 20px;
+  border-right: 2px solid var(--color-turquoise-500);
+  border-bottom: 2px solid var(--color-turquoise-500);
+  transform: rotate(-45deg);
+}
+
+@keyframes bobbing {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(10px); }
+}
+
+@media (max-width: 768px) {
+  .hero .container-hero {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .logo-section {
+    min-height: 260px;
+    order: 2;
+  }
+
+  .logo-main-container {
+    width: 200px;
+    height: 200px;
+  }
+
+  .hero-content {
+    order: 1;
+  }
+
+  .cta-section {
+    flex-direction: column;
+  }
+
+  .btn-hero {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .cred-divider {
+    display: none;
+  }
+}
+
+/* ════════════════════════════════════════════════════════════════
+   PILLAR CARDS
+   ════════════════════════════════════════════════════════════════ */
+
+.pillars-section {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: var(--space-20) var(--space-6);
+  background: var(--color-white);
+}
+
+.pillars-header {
+  text-align: center;
+  margin-bottom: var(--space-16);
+}
+
+.pillars-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  margin-bottom: var(--space-4);
+}
+
+.pillars-subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--text-secondary);
+  max-width: 700px;
+  margin: 0 auto var(--space-8);
+  line-height: 1.7;
+}
+
+.divider {
+  width: 60px;
+  height: 3px;
+  margin: 0 auto;
+  background: linear-gradient(90deg, var(--color-gold-500), var(--color-turquoise-500));
+  border-radius: 2px;
+}
+
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-8);
+  margin-bottom: var(--space-20);
+}
+
+.pillar-card {
+  position: relative;
+  background: var(--color-white);
+  border: 2px solid var(--color-silver-200);
+  border-radius: var(--border-radius-2xl);
+  padding: var(--space-8);
+  cursor: pointer;
+  transition: var(--transition-slow);
+  overflow: hidden;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+}
+
+.pillar-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-8px);
+  border-color: var(--text-tertiary);
+}
+
+.pillar-card.card-turquoise {
+  --primary-color: var(--color-turquoise-500);
+  --light-color: rgba(20, 184, 166, 0.08);
+}
+
+.pillar-card.card-gold {
+  --primary-color: var(--color-gold-500);
+  --light-color: rgba(245, 158, 11, 0.08);
+}
+
+.pillar-card.card-warm {
+  --primary-color: var(--color-warm-500);
+  --light-color: rgba(234, 88, 12, 0.08);
+}
+
+.card-background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: 150px;
+  background: var(--light-color);
+  border-radius: 50%;
+  filter: blur(40px);
+  z-index: 0;
+}
+
+.card-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-header {
+  display: flex;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+  align-items: flex-start;
+}
+
+.icon-wrapper {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--light-color);
+  border-radius: var(--border-radius-xl);
+  flex-shrink: 0;
+  font-size: 2rem;
+}
+
+.card-title {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  margin-bottom: var(--space-1);
+}
+
+.card-subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--primary-color);
+  font-weight: var(--font-weight-semibold);
+}
+
+.card-description {
+  font-size: var(--font-size-base);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-6);
+  flex-grow: 1;
+}
+
+.services-list,
+.benefits {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  margin-bottom: 0;
+}
+
+.services-list.visible,
+.benefits.visible {
+  opacity: 1;
+  margin-bottom: var(--space-4);
+}
+
+.services-list.visible {
+  max-height: 400px;
+}
+
+.benefits.visible {
+  max-height: 300px;
+  margin-bottom: var(--space-6);
+}
+
+.services-title,
+.benefits-title {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--primary-color);
+  margin-bottom: var(--space-3);
+}
+
+.services-list ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding-left: 0;
+}
+
+.services-list li {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  padding-left: var(--space-4);
+  position: relative;
+}
+
+.services-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.benefits-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding-left: 0;
+}
+
+.benefits-list li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
+.benefit-icon {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.card-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+  border: none;
+  border-radius: var(--border-radius-lg);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+  transition: var(--transition-base);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: auto;
+  color: white;
+  background: var(--primary-color);
+}
+
+.card-cta:hover {
+  filter: brightness(0.92);
+  transform: translateX(4px);
+}
+
+.cta-arrow {
+  transition: transform 0.3s ease;
+}
+
+.card-cta:hover .cta-arrow {
+  transform: translateX(4px);
+}
+
+.expand-indicator {
+  position: absolute;
+  bottom: var(--space-4);
+  right: var(--space-4);
+  opacity: 0.5;
+  transition: var(--transition-base);
+  font-size: var(--font-size-sm);
+  font-weight: bold;
+}
+
+.pillar-card:hover .expand-indicator {
+  opacity: 1;
+  color: var(--primary-color);
+}
+
+.corner-accent {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), transparent);
+  border-radius: 0 var(--border-radius-2xl) 0 0;
+}
+
+.complementary-cta {
+  text-align: center;
+  padding: var(--space-12);
+  background: linear-gradient(135deg, rgba(20, 184, 166, 0.05), rgba(245, 158, 11, 0.05));
+  border: 2px solid rgba(20, 184, 166, 0.1);
+  border-radius: var(--border-radius-2xl);
+}
+
+.complementary-cta h3 {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--space-3);
+}
+
+.complementary-cta p {
+  font-size: var(--font-size-base);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-6);
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.consultation-button {
+  padding: var(--space-4) var(--space-8);
+  background: linear-gradient(135deg, var(--color-turquoise-500), var(--color-gold-500));
+  color: white;
+  border: none;
+  border-radius: var(--border-radius-lg);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-base);
+  cursor: pointer;
+  transition: var(--transition-base);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 10px 30px rgba(20, 184, 166, 0.2);
+}
+
+.consultation-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 40px rgba(20, 184, 166, 0.3);
+}
+
+@media (max-width: 768px) {
+  .pillars-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pillar-card {
+    min-height: auto;
+  }
+
+  .card-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* ─── FOOTER SIMPLE ─── */
+.footer-simple {
+  text-align: center;
+  padding: var(--space-8) var(--space-6);
+  color: var(--text-tertiary);
+  font-size: var(--font-size-sm);
+  border-top: 1px solid var(--color-silver-200);
+}
+
+
+
+</style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════════════════════
+     NAVIGATION
+     ════════════════════════════════════════════════════════════ -->
+<nav class="navbar-custom">
+  <div class="container-nav">
+
+    <!-- Logo -->
+    <a href="#" class="logo">
+       <img class="img-fluid ml-2" style="width: 100px; height: auto"   src="img/logo.png" alt="">
+    </a>
+
+    <!-- Hamburguesa (mobile) -->
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Menú -->
+    <div class="nav-menu" id="navMenu">
+
+      <div class="menu-group">
+        <h3 class="menu-title">Servicios</h3>
+        <div class="pillars-menu">
+          <a href="#pils" class="pillar-link">
+            <span>
+              <span class="pillar-name">Clínico &amp; Mental</span>
+           </span>
+          </a>
+          <a href="#pils" class="pillar-link">
+            <span>
+              <span class="pillar-name">Consciencia Ampliada</span>
+            </span>
+          </a>
+          <a href="#pils" class="pillar-link">
+                 <span>
+              <span class="pillar-name">Espiritual &amp; Holístico</span>
+            </span>
+          </a>
+             <a href="#pils" class="pillar-link">
+                 <span>
+              <span class="pillar-name">Programación Neurolingüística</span>
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="cta-wrapper"> <a href="#citawa"  >  <button class="cta-button"> Reservar Sesión </button> </a>
+      </div>
+    </div>
+    <!-- CTA Desktop -->
+      <a href="#citawa"  > <button class="cta-desktop">  Reservar Sesión </button>      </a>
+  </div>
+</nav>
+
+<!-- ════════════════════════════════════════════════════════════
+     HERO
+     ════════════════════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="background-decoration">
+    <div class="orb-1"></div>
+    <div class="orb-2"></div>
+  </div>
+
+  <div class="container-hero">
+
+    <!-- Logo principal SVG -->
+    <div class="logo-section">
+      <div class="logo-main-container">
+     <img class="img-fluid ml-2" style=""   src="img/logo web verde origen.png" alt="">
+      </div>
+    </div>
+
+    <!-- Contenido -->
+    <div class="hero-content mt-3">
+      <div class="tagline">
+        <span class="tagline-icon">✨</span>
+        <span>Transformación Integral</span>
+        <span class="tagline-icon">✨</span>
+      </div>
+
+      <h1 class="main-title">
+        Conectando tu mente, <br>
+        <span class="highlight">transformando tu esencia</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Un enfoque multidisciplinario que une terapia clínica, consciencia expandida
+        y profundidad espiritual en un espacio premium, seguro y personalizado.
+      </p>
+
+      <div class="pillars-preview">
+        <div class="pillar-badge">
+          <span>🧠</span><span>Clínico</span>
+        </div>
+        <div class="pillar-badge">
+          <span>✨</span><span>Consciencia</span>
+        </div>
+        <div class="pillar-badge">
+          <span>🔮</span><span>Espiritual</span>
+        </div>
+          <div class="pillar-badge">
+          <span>⚛️</span><span>PNL</span>
+        </div>
+      </div>
+
+      <div class="cta-section">
+
+        <a href="#citawa" class="btn-hero btn-hero-primary">  Reservar Sesión</a>
+        <a href="#pils" class="btn-hero btn-hero-secondary"> Explorar Servicios</a>
+
+
+<!-- ════════════════════════════════════════════════════════════
+        <button class="btn-hero btn-hero-primary">
+          Reservar Sesión <span class="button-arrow">→</span>
+        </button>
+        <button class="btn-hero btn-hero-secondary">
+          Explorar Servicios
+        </button>
+     ════════════════════════════════════════════════════════════ -->
+    
+
+
+
+
+      </div>
+
+      <div class="credibility">
+        <div class="cred-item">
+          <span class="cred-number">15+</span>
+          <span class="cred-label">Años de experiencia</span>
+        </div>
+        <div class="cred-divider"></div>
+        <div class="cred-item">
+          <span class="cred-number">2000+</span>
+          <span class="cred-label">Vidas transformadas</span>
+        </div>
+        <div class="cred-divider"></div>
+        <div class="cred-item">
+          <span class="cred-number">3</span>
+          <span class="cred-label">Pilares de sanación</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-indicator" id="scrollIndicator">
+    <span class="scroll-text">Descubre más</span>
+    <div class="scroll-arrow"></div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     Slider
+     ════════════════════════════════════════════════════════════ -->
+
+
+<div class="container-fluid mt-5" style="background: : #FFFFFF;">
+<div class="row">
+<div class="col-12 col-md-6 col-lg-8">
+  <div class="container">
+  <h1 class="main-title">
+        Esencia Hipnótica <br>
+        <span class="highlight">Quiénes Somos</span>
+      </h1>
+  <p class="hero-subtitle mt-3">Esencia Hipnótica es un centro de evolución integral de alta gama diseñado para actuar como el puente definitivo entre la mente consciente, el subconsciente y el espíritu. Ofrecemos un espacio exclusivo, seguro y personalizado donde la rigurosidad de la psicología clínica se fusiona de manera armónica con la profundidad de las disciplinas holísticas y transpersonales. Atendemos a un público de clase alta —incluyendo niños, adultos y personas mayores— que busca un bienestar profundo basado en la excelencia profesional y la calidez humana.</p>
+  <hr class="my-4 hero-subtitle">
+  
+
+<div class="hero-stats rv display-flex">
+      <div class="stat-cell">
+     <h1 class="main-title">
+        Conectando tu mente, <br>
+        <span class="highlight">transformando tu esencia</span>
+      </h1>
+      </div>
+    </div>
+
+
+  
+</div>
+</div>
+<div class="col-12 col-md-6 col-lg-4">
+  <div id="carouselExampleSlidesOnly" class="carousel slide mt-5" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+     <a href="#" >  <img class="d-block w-100" src="img/1.jpeg" alt="First slide">  </a>
+    </div>
+    <div class="carousel-item">
+     <a href="#" > <img class="d-block w-100" src="img/2.jpeg" alt="Second slide"></a>
+    </div>
+    <div class="carousel-item">
+     <a href="#" > <img class="d-block w-100" src="img/3.jpeg" alt="Third slide"></a>
+    </div>
+  
+   
+
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     PILLAR CARDS
+     ════════════════════════════════════════════════════════════ -->
+<section class="pillars-section" id="pilares">
+
+  <div class="pillars-header">
+    <h2 class="pillars-title">Nuestros Tres Pilares de Transformación</h2>
+    <p class="pillars-subtitle">
+      Una arquitectura integral que integra la mente clínica, la consciencia expandida y la espiritualidad profunda.
+    </p>
+    <div class="divider" id="pils"></div>
+  </div>
+
+  <div class="pillars-grid" >
+
+    <!-- Pilar 1: Clínico -->
+    <div class="pillar-card card-turquoise">
+      <div class="card-background"></div>
+      <div class="card-content">
+        <div class="card-header">
+          <div class="icon-wrapper">🧠</div>
+          <div>
+            <h3 class="card-title">Bienestar Clínico &amp; Mental</h3>
+            <p class="card-subtitle">Fundamentos terapéuticos rigurosos</p>
+          </div>
+        </div>
+
+        <p class="card-description">
+          Abordaje profesional basado en psicología clínica validada científicamente.
+        </p>
+
+        <div class="services-list">
+          <h4 class="services-title">Servicios Incluidos:</h4>
+          <ul>
+            <li>Psicología Gestalt</li>
+            <li>Terapia Psicológica Integrativa</li>
+            <li>Programación Neurolingüística (PNL)</li>
+            <li>Manejo del estrés y ansiedad</li>
+            <li>Resolución de traumas emocionales</li>
+          </ul>
+        </div>
+
+        <div class="benefits">
+          <h4 class="benefits-title">¿Qué conseguirás?</h4>
+          <ul class="benefits-list">
+            <li><span class="benefit-icon">→</span>Recupera tu equilibrio mental</li>
+            <li><span class="benefit-icon">→</span>Supera bloqueos emocionales</li>
+            <li><span class="benefit-icon">→</span>Mejora tu autoestima</li>
+          </ul>
+        </div>
+
+        <button class="card-cta" data-toggle="modal" data-target="#exampleModalLong">
+          Ver más 
+        </button>
+
+        <div class="expand-indicator"><span class="expand-icon">▶</span></div>
+      </div>
+      <div class="corner-accent"></div>
+    </div>
+
+    <!-- Pilar 2: Consciencia -->
+    <div class="pillar-card card-gold">
+      <div class="card-background"></div>
+      <div class="card-content">
+        <div class="card-header">
+          <div class="icon-wrapper">✨</div>
+          <div>
+            <h3 class="card-title">Procesos de Consciencia Ampliada</h3>
+            <p class="card-subtitle">Exploración profunda del subconsciente</p>
+          </div>
+        </div>
+
+        <p class="card-description">
+          Técnicas comprobadas para acceder a estados expandidos de consciencia y sanación.
+        </p>
+
+        <div class="services-list">
+          <h4 class="services-title">Servicios Incluidos:</h4>
+          <ul>
+            <li>Hipnosis Regresiva</li>
+            <li>Hipnosis Terapéutica Presencial</li>
+            <li>Hipnosis en Línea</li>
+            <li>Regresiones a Vidas Pasadas</li>
+            <li>Hipnobirthing</li>
+          </ul>
+        </div>
+
+        <div class="benefits">
+          <h4 class="benefits-title">¿Qué conseguirás?</h4>
+          <ul class="benefits-list">
+            <li><span class="benefit-icon">→</span>Desbloquea memorias y patrones</li>
+            <li><span class="benefit-icon">→</span>Accede a tu sabiduría interior</li>
+            <li><span class="benefit-icon">→</span>Transforma creencias limitantes</li>
+          </ul>
+        </div>
+
+        <button class="card-cta" data-toggle="modal" data-target="#exampleModalLong2">
+          Ver más 
+        </button>
+
+        <div class="expand-indicator"><span class="expand-icon">▶</span></div>
+      </div>
+      <div class="corner-accent"></div>
+    </div>
+
+    <!-- Pilar 3: Espiritual -->
+    <div class="pillar-card card-warm">
+      <div class="card-background"></div>
+      <div class="card-content">
+        <div class="card-header">
+          <div class="icon-wrapper">🔮</div>
+          <div>
+            <h3 class="card-title">Conexión Espiritual &amp; Holística</h3>
+            <p class="card-subtitle">Abordaje transpersonal y energético</p>
+          </div>
+        </div>
+
+        <p class="card-description">
+          Técnicas ancestrales que honran tu espiritualidad y tu conexión con lo trascendente.
+        </p>
+
+        <div class="services-list">
+          <h4 class="services-title">Servicios Incluidos:</h4>
+          <ul>
+            <li>Canalización Ética</li>
+            <li>Mediunidad de Luz</li>
+            <li>Guía Espiritual Personalizada</li>
+            <li>Lectura de Tarot</li>
+            <li>Conexión con Seres de Luz</li>
+          </ul>
+        </div>
+
+        <div class="benefits">
+          <h4 class="benefits-title">¿Qué conseguirás?</h4>
+          <ul class="benefits-list">
+            <li><span class="benefit-icon">→</span>Recibe mensajes de tu guía espiritual</li>
+            <li><span class="benefit-icon">→</span>Sana a nivel energético</li>
+            <li><span class="benefit-icon">→</span>Eleva tu vibración</li>
+          </ul>
+        </div>
+
+        <button class="card-cta" data-toggle="modal" data-target="#exampleModalLong3">
+         Ver más 
+        </button>
+
+        <div class="expand-indicator"><span class="expand-icon">▶</span></div>
+      </div>
+      <div class="corner-accent"></div>
+    </div>
+
+  </div>
+
+  <!-- CTA complementaria -->
+  <div id="citawa" class="complementary-cta">
+    <h3>¿No sabes por dónde empezar?</h3>
+    <p>Realiza una consulta inicial para descubrir cuál de nuestros pilares es el ideal para ti.</p>
+
+    <a href="https://wa.me/14083415277" class="consultation-button" target="_blank" >Agendar Consulta Diagnóstica Gratis</a>
+ <!--  <button class="consultation-button">Agendar Consulta Diagnóstica Gratis</button> -->
+   
+  </div>
+
+</section>
+
+<footer class="footer-simple">
+  © 2026 Esencia Hipnótica. Todos los derechos reservados.
+</footer>
+
+ <!-- jQuery 3.6.0 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+   
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>-->
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+<!-- JavaScript propio -->
+<script >
+  
+  // ════════════════════════════════════════════════════════════════
+// ESENCIA HIPNÓTICA - JavaScript puro (sin librerías extra)
+// ════════════════════════════════════════════════════════════════
+
+document.addEventListener('DOMContentLoaded', function () {
+  /* ─── NAVBAR: hamburguesa móvil ─── */
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('navMenu');
+
+  if (hamburger && navMenu) {
+    hamburger.addEventListener('click', function () {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+
+    // Cierra el menú al hacer click en cualquier link dentro de él
+    navMenu.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+  }
+
+  /* ─── PILLAR CARDS: expandir/contraer al hacer click ─── */
+  const cards = document.querySelectorAll('.pillar-card');
+
+  cards.forEach(function (card) {
+    card.addEventListener('click', function (e) {
+      // Evita que el click en el botón CTA interno dispare el toggle dos veces
+      if (e.target.closest('.card-cta')) return;
+
+      const isExpanded = card.classList.contains('expanded');
+
+      // Contrae las demás tarjetas (comportamiento tipo acordeón, igual al useState original)
+      cards.forEach(function (c) {
+        c.classList.remove('expanded');
+        const services = c.querySelector('.services-list');
+        const benefits = c.querySelector('.benefits');
+        const icon = c.querySelector('.expand-icon');
+        if (services) services.classList.remove('visible');
+        if (benefits) benefits.classList.remove('visible');
+        if (icon) icon.textContent = '▶';
+      });
+
+      if (!isExpanded) {
+        card.classList.add('expanded');
+        const services = card.querySelector('.services-list');
+        const benefits = card.querySelector('.benefits');
+        const icon = card.querySelector('.expand-icon');
+        if (services) services.classList.add('visible');
+        if (benefits) benefits.classList.add('visible');
+        if (icon) icon.textContent = '▼';
+      }
+    });
+  });
+
+  /* ─── SCROLL INDICATOR: baja suavemente a la siguiente sección ─── */
+  const scrollIndicator = document.getElementById('scrollIndicator');
+  if (scrollIndicator) {
+    scrollIndicator.addEventListener('click', function () {
+      const nextSection = document.getElementById('pilares');
+      if (nextSection) {
+        nextSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  }
+});
+
+</script>
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+
+  <div class="tagline">
+        <span class="tagline-icon">✨</span>
+        <span>Transformación Integral</span>
+        <span class="tagline-icon">✨</span>
+      </div>
+
+      <h1 class="main-title">
+        Conectando tu mente, <br>
+        <span class="highlight">transformando tu esencia</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Un enfoque multidisciplinario que une terapia clínica, consciencia expandida
+        y profundidad espiritual en un espacio premium, seguro y personalizado.
+      </p>
+
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 2-->
+<div class="modal fade" id="exampleModalLong2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title2</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+     
+
+  <div class="tagline">
+        <span class="tagline-icon">✨</span>
+        <span>Transformación Integral</span>
+        <span class="tagline-icon">✨</span>
+      </div>
+
+      <h1 class="main-title">
+        Conectando tu mente, <br>
+        <span class="highlight">transformando tu esencia</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Un enfoque multidisciplinario que une terapia clínica, consciencia expandida
+        y profundidad espiritual en un espacio premium, seguro y personalizado.
+      </p>
+
+
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal 3-->
+<div class="modal fade" id="exampleModalLong3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title3</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+
+
+  <div class="tagline">
+        <span class="tagline-icon">✨</span>
+        <span>Transformación Integral</span>
+        <span class="tagline-icon">✨</span>
+      </div>
+
+      <h1 class="main-title">
+        Conectando tu mente, <br>
+        <span class="highlight">transformando tu esencia</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Un enfoque multidisciplinario que une terapia clínica, consciencia expandida
+        y profundidad espiritual en un espacio premium, seguro y personalizado.
+      </p>
+
+
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+<!-- Button trigger modal 
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+  Launch demo modal
+</button>
+-->

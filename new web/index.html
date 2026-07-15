@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esencia de Mariposa</title>
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 4.6.2 CDN - SIN INTEGRIDAD -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    
+    <style>
+        /* ═══════════════════════════════════════════════════════════════
+           RESETEO Y VARIABLES GLOBALES
+           ═══════════════════════════════════════════════════════════════ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-light: #E6E6FA;
+            --primary-medium: #D8BFD8;
+            --primary-dark: #B19CD9;
+            --accent-purple: #9B59B6;
+            --text-dark: #2C2C2C;
+            --text-light: #6B6B6B;
+            --white: #FFFFFF;
+            --shadow-soft: 0 8px 32px rgba(177, 156, 217, 0.15);
+            --shadow-medium: 0 12px 48px rgba(177, 156, 217, 0.2);
+            --transition: all 0.3s ease;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--white);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ═══════════════════════════════════════════════════════════════
+           NAVEGACIÓN
+           ═══════════════════════════════════════════════════════════════ */
+        .navbar {
+            background: rgba(255, 255, 255, 0.95) !important;
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow-soft);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--accent-purple), var(--primary-dark));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-link {
+            color: var(--accent-purple) !important;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-link:hover {
+            color: var(--text-dark) !important;
+        }
+
+        .btn-outline-success {
+            color: var(--accent-purple) !important;
+            border-color: var(--accent-purple) !important;
+        }
+
+        .btn-outline-success:hover {
+            background-color: var(--accent-purple) !important;
+            border-color: var(--accent-purple) !important;
+            color: white !important;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-purple) !important;
+            border-color: var(--accent-purple) !important;
+        }
+
+        .btn-primary:hover {
+            background-color: black !important;
+            border-color: black !important;
+        }
+
+        /* ═══════════════════════════════════════════════════════════════
+           ANIMACIÓN DE MARIPOSAS
+           ═══════════════════════════════════════════════════════════════ */
+        .butterfly {
+            position: absolute;
+            font-size: 2rem;
+            opacity: 0.7;
+            animation: float-butterfly 6s ease-in-out infinite;
+        }
+
+        @keyframes float-butterfly {
+            0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg); }
+            25% { transform: translateY(-30px) translateX(20px) rotate(5deg); }
+            50% { transform: translateY(-50px) translateX(0px) rotate(-5deg); }
+            75% { transform: translateY(-30px) translateX(-20px) rotate(5deg); }
+        }
+
+        .butterfly:nth-child(1) { animation-delay: 0s; }
+        .butterfly:nth-child(2) { animation-delay: 2s; }
+        .butterfly:nth-child(3) { animation-delay: 4s; }
+        .butterfly:nth-child(4) { animation-delay: 1s; }
+        .butterfly:nth-child(5) { animation-delay: 3s; }
+
+        /* ═══════════════════════════════════════════════════════════════
+           SECCIÓN HERO
+           ═══════════════════════════════════════════════════════════════ */
+        .hero {
+            margin-top: 80px;
+            min-height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('img/fondo vitanova.jpeg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding: 2rem;
+        }
+
+        .hero-content {
+            text-align: center;
+            z-index: 10;
+            animation: fadeInUp 1s ease-out;
+            max-width: 800px;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            color: white;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero .emoji {
+            display: inline-block;
+            font-size: 1.2em;
+            margin-right: 0.5rem;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            color: var(--primary-medium);
+            font-weight: 600;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .hero .description {
+            font-size: 1.1rem;
+            color: white;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            line-height: 1.8;
+        }
+
+
+
+
+        .cta-primary {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent-purple), var(--primary-dark));
+            color: var(--white);
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: var(--shadow-medium);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 56px rgba(177, 156, 217, 0.3);
+            color: white;
+        }
+
+        /* ═══════════════════════════════════════════════════════════════
+           SECCIONES GENERALES
+           ═══════════════════════════════════════════════════════════════ */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            color: var(--text-dark);
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ═══════════════════════════════════════════════════════════════
+           SECCIÓN INTRODUCCIÓN
+           ═══════════════════════════════════════════════════════════════ */
+        .intro-section {
+            background: var(--white);
+        }
+
+        .intro-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .intro-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .intro-text p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .intro-image {
+            text-align: center;
+        }
+
+        .intro-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: var(--shadow-medium);
+        }
+
+        /* ═══════════════════════════════════════════════════════════════
+           SECCIÓN QUIÉNES SOMOS
+           ═══════════════════════════════════════════════════════════════ */
+        #quienes-somos {
+            background: var(--white);
+        }
+
+        .about-content {
+            background: linear-gradient(135deg, var(--primary-light) 0%, rgba(216, 191, 216, 0.5) 100%);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow-soft);
+            line-height: 1.9;
+            font-size: 1.05rem;
+            color: var(--text-light);
+        }
+
+        /* ═══════════════════════════════════════════════════════════════
+           SECCIÓN OBJETIVO
+           ═══════════════════════════════════════════════════════════════ */
+        #objetivo {
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--white) 100%);
+        }
+
+        .objective-box {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow-soft);
+            border-left: 5px solid var(--accent-purple);
+            line-height: 1.9;
+            font-size: 1.05rem;
+            color: var(--text-light);
+        }
+
+        /* ═══════════════════════════════════════════════════════════════
+           SECCIÓN SERVICIOS - GRID DE TARJETAS
+           ═══════════════════════════════════════════════════════════════ */
+        #servicios {
+            background: var(--white);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            border: 2px solid var(--primary-medium);
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-medium);
+            border-color: var(--accent-purple);
+            background: linear-gradient(135deg, rgba(230, 230, 250, 0.5) 0%, var(--white) 100%);
+        }
+
+        .service-card .emoji {
+            font-size: 3rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--accent-purple);
+            margin-bottom: 1.5rem;
+        }
+
+        .service-item {
+            margin-bottom: 2rem;
+        }
+
+        .service-item h4 {
+            color: var(--text-dark);
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+        }
+
+        .service-item p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* ═══════════════════════════════════════════════════════════════
+           SECCIÓN CTA FINAL
+           ═══════════════════════════════════════════════════════════════ */
+        #cta-final {
+            background: linear-gradient(135deg, var(--accent-purple) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            text-align: center;
+        }
+
+        #cta-final .section-title {
+            color: var(--white);
+        }
+
+        #cta-final .section-subtitle {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .cta-text {
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+        }
+
+        .cta-button {
+            background: var(--white);
+            color: var(--accent-purple);
+            padding: 1.2rem 2.8rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
+            color: var(--accent-purple);
+        }
+
+        /* ═══════════════════════════════════════════════════════════════
+           FOOTER
+           ═══════════════════════════════════════════════════════════════ */
+        footer {
+            background: var(--text-dark);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.95rem;
+        }
+
+        footer p {
+            opacity: 0.8;
+            margin-bottom: 0.5rem;
+        }
+
+        /* ═══════════════════════════════════════════════════════════════
+           RESPONSIVE MOBILE
+           ═══════════════════════════════════════════════════════════════ */
+        @media (max-width: 768px) {
+            section {
+                padding: 3rem 1.5rem;
+            }
+
+            .hero {
+                padding: 1rem;
+                margin-top: 70px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .about-content,
+            .objective-box {
+                padding: 2rem;
+            }
+
+            .butterfly {
+                font-size: 1.5rem;
+            }
+
+            .intro-box {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .intro-text h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         NAVEGACIÓN
+         ═══════════════════════════════════════════════════════════════ -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <img class="img-fluid ml-2" style="width: 50px; height: auto"   src="img/logo.jpeg" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#quienes-somos">Quiénes Somos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#objetivo">Objetivo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#servicios">Servicios</a>
+                    </li>
+                </ul>
+                <a href="#cta-final" class="ml-3">
+                    <button class="btn btn-outline-success">🦋 Reservar</button>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         HERO CON MARIPOSAS ANIMADAS
+         ═══════════════════════════════════════════════════════════════ -->
+    <section id="inicio" class="hero">
+        <div class="butterfly">🦋</div>
+        <div class="butterfly">🦋</div>
+        <div class="butterfly">🦋</div>
+        <div class="butterfly">🦋</div>
+        <div class="butterfly">🦋</div>
+
+        <div class="hero-content">
+            <h1>
+                <span class="emoji">🦋</span>
+                Esencia de Mariposa
+            </h1>
+            <p class="subtitle">Transforma tu dolor en luz, y tu energía en paz.</p>
+            <br>   <br>
+            <p class="description">
+                Bienvenido a tu refugio de sanación. Un espacio donde la espiritualidad, 
+                la ciencia cuántica y el amor profundo se unen para guiarte en tu proceso 
+                de metamorfosis personal.
+            </p>
+           <a href="#cta-final">   <button class="cta-primary">Da el Primer Paso</button></a>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         SECCIÓN INTRODUCCIÓN
+         ═══════════════════════════════════════════════════════════════ -->
+    <section class="intro-section">
+        <div class="intro-box">
+            <div class="intro-text">
+                <h2>Acompañándote en tu camino de sanación</h2>
+                <p><strong>Conexión y Transformación</strong></p>
+                <p>Hay momentos en la vida en los que necesitamos encontrar paz, respuestas o simplemente sentirnos acompañados.</p>
+                <p>Nuestro propósito es ofrecerte un espacio seguro, amoroso y libre de juicio donde puedas reconectar con tu esencia, sanar tu corazón y encontrar claridad para seguir adelante.</p>
+
+             <a href="#servicios">     <button class="btn btn-primary" >Conocer Servicios</button> </a>
+            </div>
+            <div class="intro-image">
+                <img src="img/logo.jpeg" alt="Esencia de Mariposa Logo">
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         SECCIÓN QUIÉNES SOMOS
+         ═══════════════════════════════════════════════════════════════ -->
+    <section id="quienes-somos">
+        <h2 class="section-title"><span class="emoji">🌿</span> Quiénes Somos</h2>
+        <div class="about-content">
+            <p>
+                En Esencia de Mariposa creemos en el poder infinito de la transformación. 
+                Así como la oruga atraviesa la oscuridad para ganar sus alas, sabemos que 
+                el ser humano tiene la capacidad de sanar sus heridas más profundas y renacer.
+            </p>
+            <br>
+            <p>
+                Somos un centro de bienestar holístico e integral dedicado a acompañarte en 
+                tus momentos de mayor vulnerabilidad. A través de la terapia emocional, la 
+                sabiduría mística y el uso de tecnologías energéticas de vanguardia, te brindamos 
+                un acompañamiento ético, amoroso y seguro. No importa en qué etapa de tu viaje 
+                te encuentres; aquí te tomamos de la mano para que vuelvas a conectar con tu 
+                paz interior y tu máxima vitalidad.
+            </p>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         SECCIÓN OBJETIVO
+         ═══════════════════════════════════════════════════════════════ -->
+    <section id="objetivo">
+        <h2 class="section-title"><span class="emoji">🎯</span> Nuestro Objetivo</h2>
+        <div class="objective-box">
+            <p>
+                Nuestra misión es ser el puente que une tu bienestar físico, emocional y espiritual. 
+                Trabajamos con el propósito de liberar tus bloqueos, sanar tus despedidas y elevar 
+                tu frecuencia vibratoria. Queremos entregarte herramientas reales y resultados 
+                tangibles para que vivas una vida plena, consciente y llena de magia, garantizando 
+                siempre un entorno de absoluto respeto y confidencialidad.
+            </p>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         SECCIÓN SERVICIOS - TARJETAS
+         ═══════════════════════════════════════════════════════════════ -->
+    <section id="servicios">
+        <h2 class="section-title"><span class="emoji">✨</span> Nuestros Servicios</h2>
+        <p class="section-subtitle">Diseñados a tu medida para restaurar el equilibrio de tu alma y tu cuerpo.</p>
+
+        <div class="services-grid">
+            <!-- Tarjeta 1: Mediumnidad -->
+            <div class="service-card">
+                <span class="emoji">🔮</span>
+                <h3>Mediumnidad</h3>
+                <div class="service-item">
+                    <h4>Contacto Espiritual</h4>
+                    <p>Conexión amorosa con seres queridos trascendidos para recibir mensajes de amor, guía y paz.</p>
+                </div>
+                <div class="service-item">
+                    <h4>Dinámica Astral</h4>
+                    <p>Un proceso de hipnosis donde te relajamos y te hacemos viajar astralmente con tus seres queridos.</p>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2: Terapia Emocional -->
+            <div class="service-card">
+                <span class="emoji">💜</span>
+                <h3>Terapia Emocional</h3>
+                <div class="service-item">
+                    <h4>Enfoque Psicoterapéutico</h4>
+                    <p>Un espacio para liberar emociones, recuperar tu equilibrio y fortalecer tu bienestar interior.</p>
+                </div>
+                <div class="service-item">
+                    <h4>Beneficios Principales</h4>
+                    <p>Ayuda a identificar, procesar y gestionar las emociones para tu transformación integral.</p>
+                </div>
+            </div>
+
+            <!-- Tarjeta 3:Limpieza Energética  -->
+            <div class="service-card">
+                <span class="emoji">✨</span>
+                <h3>Limpieza Energética </h3>
+                <div class="service-item">
+                    <h4>Equilibrio de Energía</h4>
+                    <p> Ayuda para armonizar tu energía, liberar bloqueos y recuperar una sensación de ligereza y bienestar.
+                      </br>
+                        Eliminando estancamientos, envidias y densidades para que la prosperidad fluya sin obstáculos.</p>
+                </div>
+            </div>
+
+            <!-- Tarjeta 4: Armonización Energética -->
+            <div class="service-card">
+                <span class="emoji">🧿</span>
+                <h3>Armonización Energética</h3>
+                <div class="service-item">
+                    <h4>Purificación del Aura</h4>
+                    <p>Tu campo áurico absorbe el estrés y la negatividad. Limpiamos tu cuerpo sutil y tus espacios, eliminando estancamientos para que la prosperidad fluya.</p>
+                </div>
+            </div>
+
+                <!-- Tarjeta 5: Terapia de duelo -->
+            <div class="service-card">
+                <span class="emoji">🕊️ </span>
+                <h3>Terapia de duelo</h3>
+                <div class="service-item">
+                    <h4>Ansiedad de separación</h4>
+                    <p>Acompañamiento compasivo para transitar la pérdida, honrar el amor vivido y encontrar paz en el proceso.</p>
+                </div>
+            </div>
+
+            <!-- Tarjeta 6: Tecnología Cuántica -->
+            <div class="service-card">
+                <span class="emoji">⚛️</span>
+                <h3>Tecnología Cuántica</h3>
+                <div class="service-item">
+                    <h4>Exclusivo en California</h4>
+                    <p>Sesiones enfocadas en apoyar el equilibrio energético, promoviendo relajación, armonía y bienestar integral.</p>
+                    <p style="margin-top: 1rem; font-weight: 600; color: var(--accent-purple);">
+                        ✓ Regeneración celular<br>
+                        ✓ Alivio de dolores<br>
+                        ✓ Desintoxicación<br>
+                        ✓ Mejor sueño<br>
+                        ✓ Equilibrio cerebral
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         SECCIÓN CTA FINAL
+         ═══════════════════════════════════════════════════════════════ -->
+    <section id="cta-final">
+        <h2 class="section-title"><span class="emoji">💌</span> Da el Primer Paso hacia tu Transformación</h2>
+        
+        <p class="cta-text">
+           No importa dónde te encuentres en tu camino, siempre existe la posibilidad de sanar, encontrar paz y reconectar con la luz que vive en ti.
+        </p>
+
+        <p class="cta-text">
+            Reserva tu sesión hoy mismo y descubre cómo la magia de la sanación puede cambiar tu vida para siempre. 
+            Contamos con consultas online para todo el mundo y terapias físicas exclusivas en California.
+        </p>
+
+        <a href="https://wa.me/14082094594" target="_blank" style="text-decoration: none;">
+            <button class="cta-button">🦋 Reservar tu Sesión Ahora</button>
+        </a>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         FOOTER
+         ═══════════════════════════════════════════════════════════════ -->
+    <footer>
+        <p>&copy; 2026 Esencia de Mariposa. Todos los derechos reservados.</p>
+        <p>🦋 Transformando vidas, una aura a la vez. 🦋</p>
+    </footer>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         SCRIPTS CDN - SIN INTEGRIDAD (Para evitar errores SRI)
+         ═══════════════════════════════════════════════════════════════ -->
+    <!-- jQuery 3.6.0 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Popper.js 1.16.1 -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    
+    <!-- Bootstrap 4.6.2 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+
+    <script>
+        // Función para scroll suave a secciones
+        function scrollTo(selector) {
+            const element = document.querySelector(selector);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Agregar efecto de scroll para cards de servicios
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 0.6s ease-out forwards';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observar todas las tarjetas de servicio
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.style.opacity = '0';
+            observer.observe(card);
+        });
+
+        // Observar secciones
+        document.querySelectorAll('section').forEach((section, index) => {
+            if (index > 0) {
+                section.style.opacity = '0';
+                observer.observe(section);
+            }
+        });
+    </script>
+
+</body>
+</html>
