@@ -9,7 +9,25 @@ git config --global user.email "delementpro@gmail.com"
 echo "# Next-React-Copilot-ClaudeCode" >> README.md
 git init
 git add .
-git commit -m "Iniciando proyecto Next-React-Copilot-ClaudeCode"
+git commit -m "Modificando proyecto real"
 git branch -M main
 git remote add origin https://github.com/rogerpelayoarmas/Next-React-Copilot-ClaudeCode.git
 git push -u origin main
+
+
+Ahora vamos a transformar el proyecto en su estado inicial con los archivos que te adjunto, crea un router que permita utilizar los componentes adjuntos y crea los componentes con los archivos adjuntos
+
+
+Como lo prometido es deuda vamos a explicar cómo desarrollar con herramientas de IA.
+
+Para empezar recibo del cliente la página web que quieren, lo datos de la empresa y todos los datos de un cliente que no tiene absolutamente nada, ni logotipo, ni branding, solo la idea del negocio que desea desarrollar.
+
+Luego abro la IA de Gemini y empiezo con un prompt en el cual le explico lo que quiere el cliente, luego que me entrega los lineamientos del branding y le digo que me crea un prompt para Claude Code para desarrollar una página web y lo pego en  Claude Code, le digo que me que actúa como un desarrollador fullstack para crear una página web,  Claude decide utilizar para desarrollar este proyecto Next.js y React, empieza a desarrollarme un código en el cual me das cuatro archivos pero que no tienen el proyecto en sí.
+
+En mi máquina local de Windows creó el proyecto de next luego lo abro con visual studio code y a Copilot le digo que analice el proyecto, cuando analiza el proyecto me dice que es un simple proyecto de Next.js le adjunto los archivos que me creó Claude Code y le digo que me convierte el proyecto en los archivos que le acabo de adjuntar.
+
+Inmediatamente copilot me hace todas las modificaciones necesarias y me entrega un proyecto listo para presentar al cliente.
+
+Esto fácilmente pudo ser un trabajo de 16 horas y que hubiese utilizado varias profesionales como un experto en mercadeo, un arquitecto de software y un programador fullstack como mínimo fue desarrollado en un tiempo de una hora.
+
+Por esto que hoy en día un programador experimentado puede dar un mejor desenvolvimiento laboral gracias a las herramientas de IA si sabe utilizarlas
